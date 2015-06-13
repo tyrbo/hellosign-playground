@@ -1,0 +1,13 @@
+<script type="text/javascript">
+  HelloSign.init(<%= ENV["HELLOSIGN_CLIENT_ID"] %>); 
+  HelloSign.open({
+    url: <%= @url %>,
+
+    messageListener: function(e) {
+      if (e.event == HelloSign.EVENT_TEMPLATE_CREATED) {
+      }
+    }
+  });
+</script>
+
+Hello.
