@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Template ID</th>
+  </tr>
+  <% @templates.each do |template| %>
+    <tr>
+      <td><%= template.id %></td>
+      <td><%= template.title %></td>
+      <td><%= template.template_id %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to 'New Template', new_template_path %></p>
